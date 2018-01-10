@@ -116,8 +116,8 @@ function saveContact(form) {
             }
         }
     }
-    var PATTERN = "^[0-9]{6,12}$";
-    var PATTERN_EMAIL = "^[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}[.]{1}[a-zA-Z]{2,}";
+    var PATTERN = "^((8|\\+3)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{6,8}$";
+    var PATTERN_EMAIL = "[A-Za-z0-9._%-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})";
     for (i = 0; i < document.getElementsByClassName("tel_f").length; i++) {
         if ((document.getElementById("formTelephone" + i).value == "") ||
             (!document.getElementById("formTelephone" + i).value.match(PATTERN))){
@@ -237,8 +237,9 @@ function editContact(editbtn) {
         var emptyLastname = 0;
         var emptyTel = 0;
         var emptyEmail = 0;
-        var PATTERN = "^[0-9]{6,12}$";
-        var PATTERN_EMAIL = "^[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}[.]{1}[a-zA-Z]{2,}";
+
+        var PATTERN = "^((8|\\+3)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{6,8}$";
+        var PATTERN_EMAIL = "[A-Za-z0-9._%-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" ;
         if (contact.name == ""){
             emptyName = 1;
             document.getElementById("formName").style.border = "2px solid red"
