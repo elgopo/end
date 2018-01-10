@@ -19,7 +19,6 @@ header {
     border-bottom: 2px solid black;
     text-align: center;
 }
-
 .pb {
 
     color: black;
@@ -154,7 +153,7 @@ header {
 }
 
 .card_content input[type=tel] {
-    width: 100px;
+    width: 110px;
     margin-right: 25px;
 }
 .card_content input[type=email]{
